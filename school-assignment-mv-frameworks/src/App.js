@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
 import AddToList from './components/AddToList';
-// import ListItem from './components/ListItem';
-// import List from './components/List';
+import ListItem from './components/ListItem';
+import List from './components/List';
 // import axios from 'axios';
 import results from './results';
 import Header from './components/layout/Header';
 import About from './components/pages/About';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 
 
@@ -42,8 +44,8 @@ class App extends Component {
       year: year,
       completed: false  
     })
-    // .then(res => this.setState({listItems: 
-    //   [...this.state.listItems, res.data]}));
+    .then(res => this.setState({listItems: 
+      [...this.state.listItems, res.data]}));
    
   
   
@@ -57,8 +59,8 @@ class App extends Component {
             <Route exact path="/" render={props => (
               <React.Fragment>
                 <AddToList addToList={this.addToList}/>
-                {/* <List list={this.state.listItems} markComplete={this.markComplete}
-                delete={this.delete}/> */}
+                <List listItems={this.state.listItems} markComplete={this.markComplete}
+                delete={this.delete}/>
               </React.Fragment>
             )} />
             <Route path="/about" component={About} />          
