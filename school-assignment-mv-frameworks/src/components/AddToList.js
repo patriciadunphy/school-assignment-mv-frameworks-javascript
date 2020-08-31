@@ -13,6 +13,8 @@ class AddToList extends Component{
             year: this.state.year,
         }
         this.props.addToList(Data.title, Data.year);
+        this.setState({ title: ''});
+        this.setState({ year: ''});
     }
      
     onChange = (e) => this.setState({[e.target.name]:e.target.value});

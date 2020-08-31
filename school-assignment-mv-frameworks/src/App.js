@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import AddToList from './components/AddToList';
-import ListItem from './components/ListItem';
-import List from './components/List';
-import axios from 'axios';
+// import ListItem from './components/ListItem';
+// import List from './components/List';
+// import axios from 'axios';
 import results from './results';
 import Header from './components/layout/Header';
 import About from './components/pages/About';
@@ -42,9 +42,8 @@ class App extends Component {
       year: year,
       completed: false  
     })
-    .then(res => this.setState({listItems: 
-      [...this.state.listItems, res.data]
-  }))
+    // .then(res => this.setState({listItems: 
+    //   [...this.state.listItems, res.data]}));
    
   
   
