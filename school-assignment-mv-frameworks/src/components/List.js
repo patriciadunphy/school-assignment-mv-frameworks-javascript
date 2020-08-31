@@ -6,7 +6,7 @@ class List extends Component {
 
     render(){
         //mapping through each todo
-        return this.props.listItem.map((listItem) => (
+        return this.props.listItems.map((listItem) => (
         <ListItem key={listItem.id} listItem={listItem} markComplete={this.props.markComplete}
         delete={this.props.delete}/>
         ));
