@@ -10,18 +10,24 @@ import results from './results';
 
 class App extends Component {
   state = {
-    listItems: []
+    listItems: [ ]
+  }
+
+  componentDidMount(){
+    results.get('/movies.json')
+    .then(res => this.setState({ listItems: res.data}))
   }
 
   addToList = (title, year) => {
     results.post('/movies.json', {
       title: title,
       year: year,
-      completed: false
+      completed: false  
     })
     .then(res => this.setState({listItems: 
       [...this.state.listItems, res.data]
-  })); 
+  }))
+  ; 
   
   
   }
