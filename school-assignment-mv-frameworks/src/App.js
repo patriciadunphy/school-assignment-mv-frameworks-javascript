@@ -70,7 +70,7 @@ class App extends Component {
   //TYP SÅHÄR
 
   addToList = (title, year) => {
-    const newId = (this.state.listItems.length +1);
+    const newId = (this.state.listItems.length);
     results.put(`/movies/${newId}.json`, {
       id: newId,
       title: title,
