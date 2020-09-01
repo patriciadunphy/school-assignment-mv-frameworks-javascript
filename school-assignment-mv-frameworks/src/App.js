@@ -23,11 +23,18 @@ class App extends Component {
   //   .then(res => this.setState({ listItems: res.data}))
   // }
 
+  // componentDidMount(){
+  //   results.get('/movies.json')
+  //   .then(res =>{
+  //     console.log(res.data)
+  //     this.setState({ listItems: []})
+  //   })
+  // }
   componentDidMount(){
     results.get('/movies.json')
     .then(res =>{
       console.log(res.data)
-      this.setState({ listItems: []})
+      this.setState({ listItems: res.data})
     })
   }
 
