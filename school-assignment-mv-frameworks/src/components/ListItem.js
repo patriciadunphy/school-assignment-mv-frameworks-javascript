@@ -22,7 +22,7 @@ export class ListItem extends Component {
             <div style={this.getStyle()}>
                 <p>
                     <input type="checkbox" onChange={this.props.markComplete.bind(this,id)}/>{''}
-                    { title }, {year}
+                    { title } ({year})
                     <button onClick={this.props.delete.bind(this, id)} style = {btnStyle}>x</button>
                 </p>
             </div>

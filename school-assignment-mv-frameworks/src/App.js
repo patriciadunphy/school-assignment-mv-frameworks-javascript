@@ -53,8 +53,26 @@ class App extends Component {
     .then(res => this.setState({listItems: [...this.state.listItems.filter(listItem=>listItem.id!==id)]}));
 }
   //Add item to list
+
+
+  // addToList = (title, year) => {
+  //   // const addId = this.state.listItems.length()+1;
+  //   results.put(`/movies/${newId}.json`, {
+  //     // id: addId,
+  //     id: newId,
+  //     title: title,
+  //     year: year,
+  //     completed: false  
+  //   })
+  //   .then(res => this.setState({listItems: 
+  //     [...this.state.listItems, res.data]}));
+
+  //TYP SÅHÄR
+
   addToList = (title, year) => {
-    results.post('/movies.json', {
+    const newId = (this.state.listItems.length +1);
+    results.put(`/movies/${newId}.json`, {
+      id: newId,
       title: title,
       year: year,
       completed: false  
