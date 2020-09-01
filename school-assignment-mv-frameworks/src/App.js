@@ -49,7 +49,7 @@ class App extends Component {
   }
   //Delete item
   delete = (id) =>{
-  results.delete(`/movies${id}`)
+  results.delete(`/movies/${id}.json`)
     .then(res => this.setState({listItems: [...this.state.listItems.filter(listItem=>listItem.id!==id)]}));
 }
   //Add item to list
