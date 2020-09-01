@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 export class ListItem extends Component {
     getStyle = () => {
@@ -29,12 +29,6 @@ export class ListItem extends Component {
         )
     }
 }
-//PropTypes
-// ListItem.propTypes = {
-//     listItem: PropTypes.object.isRequired,
-//     markComplete: PropTypes.func.isRequired,
-//     delete: PropTypes.func.isRequired
-// }
 
 const btnStyle = {
     background: '#ff0000',
