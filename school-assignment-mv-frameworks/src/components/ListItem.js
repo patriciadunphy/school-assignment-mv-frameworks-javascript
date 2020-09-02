@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from './layout/Card';
 
 export class ListItem extends Component {
     getStyle = () => {
@@ -7,7 +8,9 @@ export class ListItem extends Component {
             background: '#f4f4f4',
             padding: '10px',
             borderBottom: '1px #ccc dotted',
-            textDecoration: this.props.listItem.completed ? 'line-through' : 'none'
+            textDecoration: this.props.listItem.completed ? 'line-through' : 'none',
+            marginLeft: '20%',
+            marginRight: '20%'
         }
     }
 
@@ -44,7 +47,9 @@ export class ListItem extends Component {
                     this.state.showCard?
                     <div>
                         Please hide me
+                        <Card />
                     </div>
+                    
                     //otherwise null will be returned
                     : null
                 }
