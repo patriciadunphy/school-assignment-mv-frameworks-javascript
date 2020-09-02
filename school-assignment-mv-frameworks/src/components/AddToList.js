@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class AddToList extends Component{
     state = {
@@ -21,7 +20,7 @@ class AddToList extends Component{
 
     render() {
         return (
-            <form onSubmit={this.onSubmit} style={{display: 'flex'}}>
+            <form onSubmit={this.onSubmit} style={{display: 'flex', paddingLeft: '20%', paddingRight: '20%'}}>
                 <input 
                 type="text" 
                 name="title" 
@@ -44,10 +43,6 @@ class AddToList extends Component{
             </form>
         )
     }
-}
-
-AddToList.propTypes = {
-    addToList: PropTypes.func.isRequired
 }
 
 export default AddToList;
