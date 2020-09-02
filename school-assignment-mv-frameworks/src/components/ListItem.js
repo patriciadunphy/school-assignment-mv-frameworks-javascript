@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 export class ListItem extends Component {
     getStyle = () => {
@@ -16,15 +15,40 @@ export class ListItem extends Component {
         console.log(this.props)
     }
 
+    //State for readMore function
+    constructor(){
+        super()
+        this.state={
+            showCard: false
+        }
+    }
+
+    //Function to toggle read more section
+    readMore(){
+        this.setState({
+            showCard: !this.state.showCard
+        })
+    }
     render() {
         const { id, title, year } = this.props.listItem;
         return (
             <div style={this.getStyle()}>
                 <p>
                     <input type="checkbox" onChange={this.props.markComplete.bind(this,id)}/>{''}
-                    { title } ({year})
+                    <span id="title" onClick={()=>this.readMore()} style={titleStyle}>{ title } ({year})</span>
+                    
                     <button onClick={this.props.delete.bind(this, id)} style = {btnStyle}>x</button>
                 </p>
+                {   
+                    //If showCard is true this div will be returned, 
+                    this.state.showCard?
+                    <div>
+                        Please hide me
+                    </div>
+                    //otherwise null will be returned
+                    : null
+                }
+                
             </div>
         )
     }
@@ -38,6 +62,10 @@ const btnStyle = {
     borderRadius: '50%',
     cursor: 'pointer',
     float: 'right'
+}
+
+const titleStyle = {
+    cursor: 'pointer',
 }
 
 export default ListItem;
