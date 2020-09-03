@@ -17,9 +17,9 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCard() {
+const MediaCard = (props) => {
   const classes = useStyles();
-
+    
   return (
     <Card className={classes.root}>
       <CardActionArea>
@@ -30,7 +30,9 @@ export default function MediaCard() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            {/* Lizard */}
+            {props.card}
+            
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -39,13 +41,14 @@ export default function MediaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        {/* <Button size="small" color="primary">
           Share
-        </Button>
+        </Button> */}
         <Button size="small" color="primary">
-          Learn More
+          Read More
         </Button>
       </CardActions>
     </Card>
   );
 }
+export default MediaCard;

@@ -6,6 +6,7 @@ import results from './results';
 import Header from './components/layout/Header';
 import About from './components/pages/About';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
+import MovieSearch from './components/movieSearch/MovieSearch';
 
 class App extends Component {
   state = {
@@ -55,6 +56,7 @@ class App extends Component {
             <Route exact path="/" render={props => (
               <React.Fragment>
                 <AddToList addToList={this.addToList}/>
+                {/* <MovieSearch /> */}
                 <List listItems={this.state.listItems} markComplete={this.markComplete}
                 delete={this.delete}/>
               </React.Fragment>
