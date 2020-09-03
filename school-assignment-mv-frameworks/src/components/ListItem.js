@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Card from './layout/Card';
+import MediaCard from './layout/Card';
 
 export class ListItem extends Component {
     getStyle = () => {
@@ -46,8 +46,8 @@ export class ListItem extends Component {
                     //If showCard is true this div will be returned, 
                     this.state.showCard?
                     <div>
-                        Please hide me
-                        <Card />
+                        <MediaCard card={title}/>
+                    {/* skicka med movie i card-komponenten move={title, year} */}
                     </div>
                     
                     //otherwise null will be returned
@@ -55,6 +55,7 @@ export class ListItem extends Component {
                 }
                 
             </div>
+            
         )
     }
 }
