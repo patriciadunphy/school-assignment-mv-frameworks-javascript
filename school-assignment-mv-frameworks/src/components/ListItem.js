@@ -46,7 +46,7 @@ export class ListItem extends Component {
                     //If showCard is true this div will be returned, 
                     this.state.showCard?
                     <div>
-                        <MediaCard card={title}/>
+                        <MediaCard title={title}/>
                     {/* skicka med movie i card-komponenten move={title, year} */}
                     </div>
                     

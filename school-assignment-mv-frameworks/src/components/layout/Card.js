@@ -31,7 +31,7 @@ const MediaCard = (props) => {
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             {/* Lizard */}
-            {props.card}
+            {props.title}
             
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
@@ -41,11 +41,11 @@ const MediaCard = (props) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        {/* <Button size="small" color="primary">
-          Share
-        </Button> */}
         <Button size="small" color="primary">
           Read More
+        </Button>
+        <Button size="small" color="primary">
+          Close
         </Button>
       </CardActions>
     </Card>

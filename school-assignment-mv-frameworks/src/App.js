@@ -56,9 +56,11 @@ class App extends Component {
             <Route exact path="/" render={props => (
               <React.Fragment>
                 <AddToList addToList={this.addToList}/>
-                {/* <MovieSearch /> */}
                 <List listItems={this.state.listItems} markComplete={this.markComplete}
                 delete={this.delete}/>
+
+                <MovieSearch title="Avengers"/>
+
               </React.Fragment>
             )} />
             <Route path="/about" component={About} />          
