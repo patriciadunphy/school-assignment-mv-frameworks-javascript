@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import MovieSearch from '../movieSearch/MovieSearch';
 
 const useStyles = makeStyles({
   root: {
@@ -35,8 +36,10 @@ const MediaCard = (props) => {
             
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
+            {/* Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+            across all continents except Antarctica */}
+            {/* <MovieSearch title={props.title}/> */}
+            <MovieSearch title={props.title}/>
           </Typography>
         </CardContent>
       </CardActionArea>

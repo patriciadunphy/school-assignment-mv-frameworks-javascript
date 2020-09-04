@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MediaCard from './layout/Card';
+import MovieSearch from './movieSearch/MovieSearch';
 
 export class ListItem extends Component {
     getStyle = () => {

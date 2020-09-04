@@ -59,7 +59,7 @@ class App extends Component {
                 <List listItems={this.state.listItems} markComplete={this.markComplete}
                 delete={this.delete}/>
 
-                <MovieSearch title="Avengers"/>
+                {/* <MovieSearch title="Avengers"/> */}
 
               </React.Fragment>
             )} />
